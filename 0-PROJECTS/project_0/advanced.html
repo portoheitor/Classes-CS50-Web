@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 0</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+</head>
+<body>
+    <div class="container-fluid mt-2">
+        <div class="row justify-content-center align-items-center g-2">
+            <div class="col text-first mb-2">
+                <img
+                    src="img/google_icon_adv.png"
+                    class="img-fluid rounded-top"
+                    alt=""
+                />
+                
+            </div>
+            <div class="col text-end mb-2" >
+                <a name="to-index" id="to-index" class="btn btn-primary" href="./index.html" role="button">Back<br>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-return-left" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M14.5 1.5a.5.5 0 0 1 .5.5v4.8a2.5 2.5 0 0 1-2.5 2.5H2.707l3.347 3.346a.5.5 0 0 1-.708.708l-4.2-4.2a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L2.707 8.3H12.5A1.5 1.5 0 0 0 14 6.8V2a.5.5 0 0 1 .5-.5"/>
+                    </svg>
+                </a>                     
+            </div>                       
+        </div>      
+        
+        <div class="row.vertical-aling justify-content-start align-items-start g-2">
+            <div class="col-md-6">
+                <form action="https://www.google.com/search" method="get" class="form-horizontal">
+                    <div class="form-group row mb-2">
+                        <label for="q" class="col-sm-4 col-form-label">Find pages with… All these words:</label>
+                        <div class="col-sm-8">
+                            <input class="form-control" type="text" name="q" id="q" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group row mb-2">
+                        <label for="as_epq" class="col-sm-4 col-form-label">Find pages with… This exact word or phrase:</label>
+                        <div class="col-sm-8">
+                            <input class="form-control" type="text" name="as_epq" id="as_epq" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group row mb-2">
+                        <label for="as_oq" class="col-sm-4 col-form-label">Find pages with… Any of these words:</label>
+                        <div class="col-sm-8">
+                            <input class="form-control" type="text" name="as_oq" id="as_oq" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group row mb-2">
+                        <label for="as_eq" class="col-sm-4 col-form-label">Find pages with… None of these words:</label>
+                        <div class="col-sm-8">
+                            <input class="form-control" type="text" name="as_eq" id="as_eq" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group row mb-2">
+                        <div class="col-sm-8 offset-sm-4 text-end">
+                            <button type="submit" class="btn btn-primary">Search on Google</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
+
+
