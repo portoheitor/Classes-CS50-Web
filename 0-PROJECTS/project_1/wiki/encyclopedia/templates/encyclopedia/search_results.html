@@ -26,12 +26,12 @@
     {{not_found}}
     <h1>Possibility Search:</h1>
 
-    <ul>        
-        {% for entry in entries %}
-            <li>
-            <a href={% url "encyclopedia:titles" entry %}>{{entry}}</a>
-            </li>
-        {% endfor %}
+    <ul>               
+    {% for file in files %}        
+        <li>
+            <a href={% url "encyclopedia:titles" file %}>{{file}}</a>
+        </li>        
+    {% endfor %}
     </ul>
 
 {% endblock %}

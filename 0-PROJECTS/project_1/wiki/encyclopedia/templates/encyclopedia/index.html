@@ -1,22 +1,17 @@
 
 {% extends "encyclopedia/layout.html" %}
-{% load static i18n %}
 
-{% block title %}
-Encyclopedia
-{% endblock %}
+{% block title %}Encyclopedia{% endblock %}
 
 {% block body %}
 
     <h1>All Pages</h1>
 
     <ul>
-        
-        {% for entry in entries %}
-            <li>
-            <a href={% url "encyclopedia:titles" entry %}>{{entry}}</a>
-            </li>
-        {% endfor %}
-    </ul>
-
+    {% for file in files %}              
+        <li>
+            <a href={% url "encyclopedia:titles" file %}>{{file}}</a>
+        </li>       
+    {% endfor %}
+    <ul>
 {% endblock %}

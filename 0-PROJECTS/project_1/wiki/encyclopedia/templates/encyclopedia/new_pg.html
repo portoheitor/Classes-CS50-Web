@@ -1,0 +1,51 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}New Page{% endblock %}
+
+{% block body %}
+
+{% if messages %}
+<div class="messages-container" id="message-callback">
+    {% for message in messages %}
+        {% if message %}
+            <div class="row">
+                <div class="col-12 p-0">
+                    <div class="alert mb-0 mt-2 alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+                        <div class="d-flex justify-content-between">
+                            <b>{{ message|safe }}</b>
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {% endif %}
+    {% endfor %}
+</div>
+{% endif %}
+
+<div class="row">
+    <div class="mb-6 d-flex justify-content-center">
+        <h1>New Page ⚙️</h1>
+    </div>
+
+    <form class="form-label" method="POST" action="{% url 'encyclopedia:new_page' %}">
+        {% csrf_token %}
+        <div class="mb-3">
+            <label for="formGroupExampleInput" class="form-label"><h4>New Title 📒</h4></label>
+            <input type="text" class="form-control" id="formGroupExampleInput" name="formGroupExampleInput" placeholder="Insert Title Here!">
+        </div>
+    
+        <div class="mb-3">
+            <label for="FormControlTextarea1" class="form-label"><h4>New Content Markdown</h4></label>
+            <textarea class="form-control" id="FormControlTextarea1" name="FormControlTextarea1" style="height: 200px;" placeholder="Insert Markdown Here!"></textarea>
+        </div>
+    
+        <div class="mb-3 d-flex justify-content-end">
+            <button type="submit" class="btn btn-primary btn-lg">Save New Page</button>
+        </div>
+    </form>
+
+   
+
+</div>
+{% endblock %}
